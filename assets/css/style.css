@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    --back: aquamarine;
+    --text: #000;
+    --font: Plus Jakarta Sans; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    width: 100%;
+}
+
+#root{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 15fr 1fr ;
+    grid-template-areas: 
+        'nav nav'
+        'aside main'
+        'footer footer'
+        ;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    grid-area: nav;
+    background-color:  var(--back);
+    h2{
+        font-weight: 800;
+        font-size: 80px;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.topnav{
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 10px;
+    border-radius: 5%;
+}
+/* End Navbar */
+
+
+/* aside */
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 2rem;
+    padding-top: 3rem;
+}
+
+aside h3{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.categories h4 p{
+    gap: 1rem;
+}
+.categories{
+    font-size: 1rem;
+}
+.categories span{
+    color: gray;
+    
+}
+
+h4{
+    padding-bottom: 0.5rem;
+}
+
+p{
+    padding-bottom: 0.5rem;
+}
+
+/* End aside */
+
+
+
+
+/* main */
+
+main{
+    padding: 0 1rem ;
+    grid-area: main;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(225, 225, 225);  
+    height: 450px;
+    width: 300px ;
+}
+
+.card img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card h2{
+    margin-bottom: 2rem;
+}
+
+.product-info{
+    padding: 1rem;
+}
+
+.buy{
+    padding-left: 4rem;
+}
+
+.buy button{
+    float: right;
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 5%;
+    background-color: black ;
+    border: none;
+    color: white;
+
+}
+.buy :hover{
+    color: #D4AF37;
+}
+
+.cart button{
+    border: none;
+    background-color: white;
+}
+.product-info i:hover{
+    color: #D4AF37;
+}
+
+.compra{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* end main */
+
+/* footer */
+
+.container-footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--back);
+    
+}
+.container-footer h3{
+    padding-top: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.container-footer p{
+    color:black;
+    font-size: 10px;
+}
